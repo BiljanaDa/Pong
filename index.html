@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+     canvas {
+        background: black;
+        display: block;
+        margin: 0 auto;
+      }
+      #startButtonContainer {
+        text-align: center;
+        margin-top: 20px;
+      }
+      #scoreContainer {
+        display: flex;
+        justify-content: space-between;
+        margin: 10px auto;
+        width: 200px;
+        color: white;
+      }
+      .score {
+        font-size: 24px;
+      }
+      .score-label {
+        font-size: 18px;
+        text-align: center;
+      }
+      .score-container {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      #winnerMessage {
+        text-align: center;
+        margin-top: 20px;
+      }
+      #winningPlayer {
+        font-size: 24px;
+        color: white;
+      }
+      #restartButton {
+        font-size: 18px;
+        background: #00f;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        display: block; 
+        margin: 20px auto; 
+      }
+      #restartButton:hover {
+        background: #007acc;
+      }
+    </style>
+  </head>
+  <canvas id="pong" width="800" height="400"></canvas>
+  <div id="startButtonContainer">
+    <button id="startButton">Start</button>
+  </div>
+  <div id="scoreContainer">
+    <div class="score-container">
+      <div class="score" id="playerScore">0</div>
+      <div class="score-label">Player:</div>
+    </div>
+    <div class="score-container">
+      <div class="score" id="computerScore">0</div>
+      <div class="score-label">Computer:</div>
+    </div>
+  </div>
+  <div id="winnerMessage" style="display: none">
+    <p class="winner" style="text-align: center;">
+      Winner: <span id="winningPlayer" style="color: darkred;">Player</span></p>
+    </p>
+    <button id="restartButton">Restart</button>
+  </div>
+    <script src="./index.js"></script>
+  </body>
+</html>
